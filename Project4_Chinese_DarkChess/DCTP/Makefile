@@ -1,0 +1,16 @@
+all: main.exe
+
+CC = g++
+INCLUDE = .
+CFLAGS = -Wall -Wextra -std=gnu++14
+
+main.exe: main.o MyAI.o
+	$(CC) -o main.exe main.o MyAI.o
+main.o: main.cpp 
+	$(CC) -I$(INCLUDE) $(CFLAGS) -c main.cpp
+MyAI.o: MyAI.cpp MyAI.h
+	$(CC) -I$(INCLUDE) $(CFLAGS) -c MyAI.cpp
+
+
+clean:
+	rm -f main.exe main.o MyAI.o
