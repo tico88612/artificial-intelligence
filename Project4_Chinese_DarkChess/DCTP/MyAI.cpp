@@ -194,38 +194,39 @@ void MyAI::generateMove(char move[6])
 			CoverIndex[CoverCount] = i;
 			CoverCount++;
 		}
-		int Answer;
-		if(CoverCount > 0)
-		{
-			Result[count] = CoverIndex[rand()%CoverCount];
-			Result[count] = Result[count]*100+Result[count];
-			count++;
-		}
+	int Answer;
+	if(CoverCount > 0)
+	{
+		Result[count] = CoverIndex[rand()%CoverCount];
+		Result[count] = Result[count]*100+Result[count];
+		count++;
+	}
 
 
-		//randon choose legal move
-		if(count > 0)
-		{
-			Answer = Result[rand()%count];
-			startPoint = Answer/100;
-			EndPount   = Answer%100;
-			sprintf(move, "%c%c-%c%c",'a'+(startPoint%4),'1'+(7-startPoint/4),'a'+(EndPount%4),'1'+(7-EndPount/4));
-		}
-		//no legal move -> flip chess
-		else
-		{
-			sprintf(move, "NAN");
-		}
-		char chess_Start[4]="";
-		char chess_End[4]="";
-		Pirnf_Chess(Board[startPoint],chess_Start);
-		Pirnf_Chess(Board[EndPount],chess_End);
-		printf("My result: \n--------------------------\n");
-		printf("(%d) -> (%d)\n",startPoint,EndPount);
-		printf("<%s> -> <%s>\n",chess_Start,chess_End);
-		printf("move:%s\n",move);
-		printf("--------------------------\n");
-		this->Pirnf_Chessboard();
+	//randon choose legal move
+	if(count > 0)
+	{
+		Answer = Result[rand()%count];
+		startPoint = Answer/100;
+		EndPount   = Answer%100;
+		sprintf(move, "%c%c-%c%c",'a'+(startPoint%4),'1'+(7-startPoint/4),'a'+(EndPount%4),'1'+(7-EndPount/4));
+	}
+	//no legal move -> flip chess
+	else
+	{
+		sprintf(move, "NAN");
+	}
+	char chess_Start[4]="";
+	char chess_End[4]="";
+	Pirnf_Chess(Board[startPoint],chess_Start);
+	Pirnf_Chess(Board[EndPount],chess_End);
+	printf("My result: \n--------------------------\n");
+	printf("(%d) -> (%d)\n",startPoint,EndPount);
+	printf("<%s> -> <%s>\n",chess_Start,chess_End);
+	printf("move:%s\n",move);
+	printf("--------------------------\n");
+	this->Pirnf_Chessboard();
+		
 }
 
 void MyAI::MakeMove(const char move[6])
