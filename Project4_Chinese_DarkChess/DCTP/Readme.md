@@ -7,6 +7,6 @@ Author：tico88612
 You need to install g++.
 
 ```bash
-make all 
+make all
 make clear
 ```
