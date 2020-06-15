@@ -66,6 +66,9 @@ public:
 	bool time_settings(const char* data[], char* response);// 15
 	bool time_left(const char* data[], char* response);// 16
 	bool showboard(const char* data[], char* response);// 17
+	int getBoard (int i) { return Board[i]; }
+	int getClose (int i) { return CloseChess[i]; }
+	int getColor () { return Color; }
 private:
 	int Color;
 	int Red_Time, Black_Time;

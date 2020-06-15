@@ -196,8 +196,13 @@ void MyAI::initBoardState() {
 }
 
 // Start Implementation Alpha-Beta Pruning
+
 void MyAI::generateMove(char move[6]) {
-    /* generateMove Call by reference: change src,dst */
+	
+}
+/*
+void MyAI::generateMove(char move[6]) {
+    // generateMove Call by reference: change src,dst 
 
     int Result[100];
     int count = this->Expand(this->Board, this->Color, Result);
@@ -240,6 +245,7 @@ void MyAI::generateMove(char move[6]) {
     printf("--------------------------\n");
     this->Pirnf_Chessboard();
 }
+*/
 
 void MyAI::MakeMove(const char move[6]) {
     int src, dst;
