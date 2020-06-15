@@ -1,6 +1,8 @@
 # Chinese Dark Chess
 
-Author：tico88612
+Author: tico88612
+
+Fork from: JonahYeoh
 
 ### Usage
 

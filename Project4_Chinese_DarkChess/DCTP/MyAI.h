@@ -1,10 +1,11 @@
-#ifndef MYAI_INCLUDED
-#define MYAI_INCLUDED 
+#ifndef TICO88612AI_INCLUDED
+#define TICO88612AI_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include <time.h>
+#include "State.h"
 
 #define RED 0
 #define BLACK 1
@@ -69,6 +70,9 @@ public:
 	int getBoard (int i) { return Board[i]; }
 	int getClose (int i) { return CloseChess[i]; }
 	int getColor () { return Color; }
+	int evaluation_fn(State& state, int color);
+	int min_value(State& state, int alpha, int beta, int depth);
+	int max_value(State& state, int alpha, int beta, int depth);
 private:
 	int Color;
 	int Red_Time, Black_Time;
