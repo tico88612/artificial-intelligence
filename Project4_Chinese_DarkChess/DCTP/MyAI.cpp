@@ -1,5 +1,4 @@
 #include "MyAI.h"
-#include "misc.h"
 
 MyAI::MyAI(void) { this->Color = 2; }
 
@@ -199,9 +198,9 @@ void MyAI::initBoardState() {
 // Start Implementation Alpha-Beta Pruning
 
 void MyAI::generateMove(char move[6]) {
-    Node root(*this);
+    //Node root(*this);
     int BestMove;
-    alpha_beta_pruning(root, 0, 6, -INF, INF, BestMove);
+    //alpha_beta_pruning(root, 0, 6, -INF, INF, BestMove);
 
     int startPoint = BestMove / 100;
     int endPoint = BestMove % 100;
