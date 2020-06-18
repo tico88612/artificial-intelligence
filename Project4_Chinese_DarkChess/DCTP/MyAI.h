@@ -70,9 +70,6 @@ public:
 	int getBoard (int i) { return Board[i]; }
 	int getClose (int i) { return CloseChess[i]; }
 	int getColor () { return Color; }
-	int evaluation_fn(State& state, int color);
-	int min_value(State& state, int alpha, int beta, int depth);
-	int max_value(State& state, int alpha, int beta, int depth);
 private:
 	int Color;
 	int Red_Time, Black_Time;
