@@ -5,7 +5,6 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
-#include "State.h"
 
 #define RED 0
 #define BLACK 1
