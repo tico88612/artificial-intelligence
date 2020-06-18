@@ -207,7 +207,7 @@ void MyAI::generateMove(char move[6]) {
     // fprintf(stderr, "Generating moves...\n");
     State root(*this);
 	int BestMove;
-	// Negascout(root, 0, 6, -INF, INF, BestMove);
+	NegaScout(root, 0, 6, -INF, INF, BestMove);
 	int startPoint = BestMove / 100;
 	int endPoint = BestMove % 100;
 	sprintf(move, "%c%c-%c%c", 'a' + (startPoint % 4), '1' + (7 - startPoint / 4), 'a' + (endPoint % 4), '1' + (7 - endPoint / 4));
